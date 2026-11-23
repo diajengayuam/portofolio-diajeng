@@ -78,14 +78,11 @@
       <aside class="w-full lg:w-[300px] lg:shrink-0 lg:sticky lg:top-10 bg-white border border-[#E5E7EB] rounded-2xl p-6 sm:p-7 shadow-[0_1px_3px_rgba(17,24,39,0.03)]">
         <div class="flex flex-col items-center text-center">
 
-          <!-- Profile Avatar Frame (112x112px)
-               HOW TO ADD YOUR PHOTO:
-               Save your photo as "foto-diajeng.jpg" in the same folder as index.html.
-               If the file is not found yet, it gracefully falls back to the "DA" monogram. -->
+          <!-- Profile Avatar Frame (112x112px) -->
           <div class="relative w-28 h-28 rounded-2xl bg-[#F3F4F6] border border-[#E5E7EB] overflow-hidden flex items-center justify-center mb-5">
             <span class="font-semibold text-2xl tracking-tight text-[#1E293B] select-none" aria-hidden="true">DA</span>
             <img
-              src="foto-diajeng.jpg"
+              src="assets/img/foto-diajeng.jpg"
               alt="Diajeng Ayu Asmara Mudjahidin"
               class="absolute inset-0 w-full h-full object-cover"
               onerror="this.style.display='none'"
@@ -382,41 +379,6 @@
             <!-- 2-Column Project Cards Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-              <!-- Project 1 -->
-              <article data-category="Data & BI" class="project-item rounded-xl border border-[#E5E7EB] bg-white p-5 flex flex-col justify-between hover:border-[#1E293B]/40 transition-colors">
-                <div>
-                  <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="font-mono text-[11px] font-medium text-[#0F766E] bg-[#0F766E]/10 px-2.5 py-0.5 rounded">
-                      Data &amp; BI
-                    </span>
-                    <span class="font-mono text-[11px] text-[#4B5563]">180.5K Rows</span>
-                  </div>
-                  <h3 class="text-base font-bold text-[#111827] leading-snug">
-                    Global Supply Chain &amp; Logistics Dashboard
-                  </h3>
-                  <p class="text-xs sm:text-[13px] text-[#4B5563] mt-2 leading-relaxed">
-                    Cleaned and modeled 180,511 transactional records (65,752 unique orders) across 17 variables, uncovering a 54.8% late delivery rate and mapping $36.78M total revenue across product categories.
-                  </p>
-                </div>
-
-                <div class="mt-5 pt-4 border-t border-[#E5E7EB] flex items-center justify-between gap-3">
-                  <div class="flex flex-wrap gap-1.5">
-                    <span class="font-mono text-[11px] text-[#4B5563] bg-[#F8F9FA] border border-[#E5E7EB] px-2 py-0.5 rounded">Power BI</span>
-                    <span class="font-mono text-[11px] text-[#4B5563] bg-[#F8F9FA] border border-[#E5E7EB] px-2 py-0.5 rounded">Excel</span>
-                  </div>
-                  <button
-                    type="button"
-                    data-project-index="0"
-                    class="view-details-btn shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-[#1E293B] hover:text-[#0F766E] transition-colors"
-                  >
-                    <span>View Details</span>
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                    </svg>
-                  </button>
-                </div>
-              </article>
-
               <!-- Project 2 -->
               <article data-category="Data & BI" class="project-item rounded-xl border border-[#E5E7EB] bg-white p-5 flex flex-col justify-between hover:border-[#1E293B]/40 transition-colors">
                 <div>
@@ -441,7 +403,7 @@
                   </div>
                   <button
                     type="button"
-                    data-project-index="1"
+                    data-project-index="0"
                     class="view-details-btn shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-[#1E293B] hover:text-[#0F766E] transition-colors"
                   >
                     <span>View Details</span>
@@ -479,7 +441,7 @@
                   </div>
                   <button
                     type="button"
-                    data-project-index="2"
+                    data-project-index="1"
                     class="view-details-btn shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-[#1E293B] hover:text-[#0F766E] transition-colors"
                   >
                     <span>View Details</span>
@@ -514,7 +476,7 @@
                   </div>
                   <button
                     type="button"
-                    data-project-index="3"
+                    data-project-index="2"
                     class="view-details-btn shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-[#1E293B] hover:text-[#0F766E] transition-colors"
                   >
                     <span>View Details</span>
@@ -525,40 +487,6 @@
                 </div>
               </article>
 
-              <!-- Project 5 -->
-              <article data-category="Branding & Web" class="project-item rounded-xl border border-[#E5E7EB] bg-white p-5 flex flex-col justify-between hover:border-[#1E293B]/40 transition-colors">
-                <div>
-                  <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="font-mono text-[11px] font-medium text-[#1E293B] bg-[#1E293B]/10 px-2.5 py-0.5 rounded">
-                      Branding &amp; Web
-                    </span>
-                    <span class="font-mono text-[11px] text-[#4B5563]">UI / Web</span>
-                  </div>
-                  <h3 class="text-base font-bold text-[#111827] leading-snug">
-                    Responsive Web &amp; UI Layout Design
-                  </h3>
-                  <p class="text-xs sm:text-[13px] text-[#4B5563] mt-2 leading-relaxed">
-                    Built functional, user-friendly websites with clean navigation structure, responsive layouts, and cohesive visual hierarchy.
-                  </p>
-                </div>
-
-                <div class="mt-5 pt-4 border-t border-[#E5E7EB] flex items-center justify-between gap-3">
-                  <div class="flex flex-wrap gap-1.5">
-                    <span class="font-mono text-[11px] text-[#4B5563] bg-[#F8F9FA] border border-[#E5E7EB] px-2 py-0.5 rounded">WordPress</span>
-                    <span class="font-mono text-[11px] text-[#4B5563] bg-[#F8F9FA] border border-[#E5E7EB] px-2 py-0.5 rounded">HTML/CSS</span>
-                  </div>
-                  <button
-                    type="button"
-                    data-project-index="4"
-                    class="view-details-btn shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-[#1E293B] hover:text-[#0F766E] transition-colors"
-                  >
-                    <span>View Details</span>
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                    </svg>
-                  </button>
-                </div>
-              </article>
 
             </div>
           </section>
@@ -934,18 +862,6 @@
       const projectData = [
         {
           category: 'Data & BI',
-          title: 'Global Supply Chain & Logistics Dashboard',
-          tools: ['Power BI', 'Microsoft Excel', 'Power Query', 'Data Modeling'],
-          overview: 'End-to-end data cleaning and business intelligence dashboard built from the DataCo Global Supply Chain dataset. Streamlined over 50 raw variables down to 17 clean operational and financial fields to evaluate revenue drivers and shipping performance.',
-          outcomes: [
-            'Cleaned and modeled 180,511 transactional records (65,752 unique orders) with zero duplicate entries.',
-            'Tracked 6 core executive KPIs, including $36.78M total revenue, $3.97M net profit (10.8% margin), and order fulfillment rates.',
-            'Uncovered a 54.8% late delivery rate (3.50 actual vs. 2.93 scheduled shipping days) and identified top-performing categories (Fishing, Cleats, Camping & Hiking).'
-          ],
-          liveUrl: 'https://app.powerbi.com/' // <-- Replace with your Power BI public link
-        },
-        {
-          category: 'Data & BI',
           title: 'Global Climate Action & Disaster Impact Tracker',
           tools: ['Google Looker Studio', 'Google Sheets', 'Calculated Fields'],
           overview: 'Interactive multi-year global climate disaster tracker designed to evaluate humanitarian impact, emergency response agility, and international aid distribution across countries and disaster types.',
@@ -979,17 +895,6 @@
             'Served as Webinar PIC—drafting speaker Terms of Reference (TOR), event rundowns, and outreach for 100+ participants.'
           ],
           liveUrl: 'https://drive.google.com/' // <-- Replace with your Google Drive / Canva portfolio link
-        },
-        {
-          category: 'Branding & Web',
-          title: 'Responsive Web & UI Layout Design',
-          tools: ['WordPress', 'HTML/CSS', 'UI/UX Layout', 'Content Architecture'],
-          overview: 'Designed and built clean, responsive web pages focused on clear information hierarchy, intuitive navigation, and cross-device usability.',
-          outcomes: [
-            'Structured page layouts and navigation menus to improve content readability on desktop and mobile screens.',
-            'Applied consistent typography, spacing, and visual hierarchy aligned with organizational branding.'
-          ],
-          liveUrl: 'https://drive.google.com/' // <-- Replace with your live website or showcase link
         }
       ];
 
