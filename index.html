@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diajeng Ayu Asmara Mudjahidin — Portfolio</title>
+  <meta name="description" content="Personal portfolio of Diajeng Ayu Asmara Mudjahidin, Business Statistics undergraduate student at Institut Teknologi Sepuluh Nopember (ITS)." />
+
+  <!-- Google Fonts: Inter (UI & Body) + JetBrains Mono (Metadata & Tool Tags) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            canvas: '#F8F9FA',
+            ink: '#111827',
+            muted: '#4B5563',
+            navy: '#1E293B',
+            teal: '#0F766E',
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Base typography & subtle scroll offset for sticky navigation */
+    body {
+      background-color: #F8F9FA;
+      color: #111827;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    section[id] {
+      scroll-margin-top: 5.5rem;
+    }
+
+    /* Clean custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F8F9FA;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D1D5DB;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #9CA3AF;
+    }
+  </style>
+</head>
+<body class="bg-[#F8F9FA] text-[#111827] antialiased selection:bg-[#0F766E]/15 selection:text-[#0F766E]">
+
+  <!-- =====================================================================
+       MAIN vCARD SPLIT-LAYOUT CONTAINER
+       Desktop: Sticky Left Profile Sidebar (~300px) + Right Content Card (~820px)
+       Mobile/Tablet: Stacked Single Column
+  ====================================================================== -->
+  <div class="max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-14">
+    <div class="flex flex-col lg:flex-row items-start gap-6 lg:gap-8">
+
+      <!-- ===================================================================
+           1. LEFT STICKY PROFILE SIDEBAR
+      ==================================================================== -->
+      <aside class="w-full lg:w-[300px] lg:shrink-0 lg:sticky lg:top-10 bg-white border border-[#E5E7EB] rounded-2xl p-6 sm:p-7 shadow-[0_1px_3px_rgba(17,24,39,0.03)]">
+        <div class="flex flex-col items-center text-center">
+
+          <!-- Profile Avatar Frame (112x112px)
+               HOW TO ADD YOUR PHOTO:
+               Save your photo as "foto-diajeng.jpg" in the same folder as index.html.
+               If the file is not found yet, it gracefully falls back to the "DA" monogram. -->
+          <div class="relative w-28 h-28 rounded-2xl bg-[#F3F4F6] border border-[#E5E7EB] overflow-hidden flex items-center justify-center mb-5">
+            <span class="font-semibold text-2xl tracking-tight text-[#1E293B] select-none" aria-hidden="true">DA</span>
+            <img
+              src="foto-diajeng.jpg"
+              alt="Diajeng Ayu Asmara Mudjahidin"
+              class="absolute inset-0 w-full h-full object-cover"
+              onerror="this.style.display='none'"
+            />
+          </div>
+
+          <!-- Full Name & Role -->
+          <h1 class="text-lg sm:text-xl font-bold tracking-tight text-[#111827] leading-snug">
+            Diajeng Ayu Asmara Mudjahidin
+          </h1>
+          <p class="text-sm font-medium text-[#4B5563] mt-1">
+            Business Statistics Student at ITS
+          </p>
+
+          <!-- Availability Status Pill -->
+          <div class="inline-flex items-center gap-2 mt-3.5 px-3 py-1.5 rounded-full bg-[#F8F9FA] border border-[#E5E7EB]">
+            <span class="w-2 h-2 rounded-full bg-emerald-600 shrink-0"></span>
+            <span class="font-mono text-[11px] font-medium text-[#1E293B]">
+              Open for Internship (Jan–Jul 2027)
+            </span>
+          </div>
+        </div>
+
+        <!-- Thin Hairline Divider -->
+        <hr class="my-6 border-[#E5E7EB]" />
+
+        <!-- Contact & Academic Metadata Rows -->
+        <ul class="space-y-4 text-sm">
+          <!-- Email Row with Copy Action -->
+          <li class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-[#F8F9FA] border border-[#E5E7EB] flex items-center justify-center text-[#1E293B] shrink-0 mt-0.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+            </div>
+            <div class="min-w-0 flex-1">
+              <div class="flex items-center justify-between gap-2">
+                <span class="font-mono text-[11px] uppercase tracking-wider text-[#4B5563]">Email</span>
+                <button
+                  id="copyEmailBtn"
+                  type="button"
+                  class="font-mono text-[11px] font-medium text-[#0F766E] hover:underline focus:outline-none"
+                >
+                  Copy
+                </button>
+              </div>
+              <a
+                href="mailto:diajengayuam@gmail.com"
+                class="text-xs sm:text-[13px] font-medium text-[#111827] hover:text-[#0F766E] transition-colors block truncate mt-0.5"
+                title="diajengayuam@gmail.com"
+              >
+                diajengayuam@gmail.com
+              </a>
+            </div>
+          </li>
+
+          <!-- Location Row -->
+          <li class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-[#F8F9FA] border border-[#E5E7EB] flex items-center justify-center text-[#1E293B] shrink-0 mt-0.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+            </div>
+            <div class="min-w-0 flex-1">
+              <span class="font-mono text-[11px] uppercase tracking-wider text-[#4B5563] block">Location</span>
+              <span class="text-xs sm:text-[13px] font-medium text-[#111827] block mt-0.5 leading-snug">
+                Surabaya, East Java <span class="text-[#4B5563] font-normal">(Willing to Relocate)</span>
+              </span>
+            </div>
+          </li>
+
+          <!-- Education Row -->
+          <li class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-[#F8F9FA] border border-[#E5E7EB] flex items-center justify-center text-[#1E293B] shrink-0 mt-0.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342" />
+              </svg>
+            </div>
+            <div class="min-w-0 flex-1">
+              <span class="font-mono text-[11px] uppercase tracking-wider text-[#4B5563] block">Education</span>
+              <span class="text-xs sm:text-[13px] font-medium text-[#111827] block mt-0.5 leading-snug">
+                D4 Business Statistics, ITS
+              </span>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Thin Hairline Divider -->
+        <hr class="my-6 border-[#E5E7EB]" />
+
+        <!-- Bottom Social & Portfolio Links Row
+             EDIT YOUR LINKS BELOW: Replace the href="#" values with your actual URLs -->
+        <div class="flex items-center justify-between gap-2 text-xs font-medium text-[#4B5563]">
+          <!-- LinkedIn Link -->
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-[#E5E7EB] hover:border-[#1E293B] hover:text-[#111827] transition-colors"
+          >
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+
+          <!-- GitHub Link -->
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-[#E5E7EB] hover:border-[#1E293B] hover:text-[#111827] transition-colors"
+          >
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
+            </svg>
+            <span>GitHub</span>
+          </a>
+
+          <!-- Portfolio Drive Link -->
+          <a
+            href="https://drive.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-[#E5E7EB] hover:border-[#0F766E] hover:text-[#0F766E] transition-colors"
+          >
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
+            </svg>
+            <span>Drive</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- ===================================================================
+           2. RIGHT MAIN CONTENT CARD
+      ==================================================================== -->
+      <main class="w-full max-w-[820px] flex-1 bg-white border border-[#E5E7EB] rounded-2xl shadow-[0_1px_3px_rgba(17,24,39,0.03)] overflow-hidden">
+
+        <!-- Sticky Top Navigation Tabs Inside Card -->
+        <nav aria-label="Portfolio sections" class="sticky top-0 z-20 bg-white/95 backdrop-blur-sm border-b border-[#E5E7EB] px-6 sm:px-9">
+          <ul class="flex items-center gap-6 sm:gap-8 overflow-x-auto text-sm font-medium">
+            <li>
+              <a href="#about" data-nav-target="about" class="nav-tab inline-block py-4 border-b-2 border-[#0F766E] text-[#111827] font-semibold whitespace-nowrap transition-colors">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#projects" data-nav-target="projects" class="nav-tab inline-block py-4 border-b-2 border-transparent text-[#4B5563] hover:text-[#111827] whitespace-nowrap transition-colors">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a href="#experience" data-nav-target="experience" class="nav-tab inline-block py-4 border-b-2 border-transparent text-[#4B5563] hover:text-[#111827] whitespace-nowrap transition-colors">
+                Experience
+              </a>
+            </li>
+            <li>
+              <a href="#contact" data-nav-target="contact" class="nav-tab inline-block py-4 border-b-2 border-transparent text-[#4B5563] hover:text-[#111827] whitespace-nowrap transition-colors">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Content Sections Container -->
+        <div class="p-6 sm:p-9 space-y-14">
+
+          <!-- ===============================================================
+               SECTION 1: ABOUT ME & CORE FOCUS
+          ================================================================ -->
+          <section id="about">
+            <div class="mb-5">
+              <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-[#111827]">About Me</h2>
+              <div class="w-9 h-1 bg-[#0F766E] rounded-full mt-2"></div>
+            </div>
+
+            <div class="space-y-4 text-sm sm:text-[15px] text-[#4B5563] leading-relaxed">
+              <p>
+                I am a 2023 Business Statistics undergraduate student at <strong class="font-semibold text-[#111827]">Institut Teknologi Sepuluh Nopember (ITS)</strong> working at the intersection of business intelligence, statistical analysis, and brand communications. My academic training focuses on cleaning, modeling, and interpreting structured data to answer practical operational and commercial questions.
+              </p>
+              <p>
+                Alongside analytical projects—such as building multi-page Power BI and Looker Studio dashboards from 180,000+ supply chain records—I have led an 8-person branding division, coordinated national webinar operations, and managed student onboarding databases. I enjoy bringing structure, clarity, and accountability to both quantitative reports and team workflows.
+              </p>
+            </div>
+
+            <!-- Sub-section: Core Focus (2x2 Grid) -->
+            <div class="mt-8">
+              <h3 class="text-base font-semibold text-[#111827] mb-4">Core Focus</h3>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Focus Card 1 -->
+                <div class="p-5 rounded-xl border border-[#E5E7EB] bg-[#F8F9FA]/50 hover:border-[#1E293B]/30 transition-colors">
+                  <div class="flex items-center gap-3 mb-2.5">
+                    <div class="w-9 h-9 rounded-lg bg-white border border-[#E5E7EB] flex items-center justify-center text-[#0F766E] shrink-0">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                      </svg>
+                    </div>
+                    <h4 class="text-sm font-semibold text-[#111827]">Data Visualization &amp; BI</h4>
+                  </div>
+                  <p class="text-xs sm:text-[13px] text-[#4B5563] leading-relaxed">
+                    Building interactive dashboards in Power BI, Looker Studio, and Tableau to track KPIs and operational bottlenecks.
+                  </p>
+                </div>
+
+                <!-- Focus Card 2 -->
+                <div class="p-5 rounded-xl border border-[#E5E7EB] bg-[#F8F9FA]/50 hover:border-[#1E293B]/30 transition-colors">
+                  <div class="flex items-center gap-3 mb-2.5">
+                    <div class="w-9 h-9 rounded-lg bg-white border border-[#E5E7EB] flex items-center justify-center text-[#0F766E] shrink-0">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                      </svg>
+                    </div>
+                    <h4 class="text-sm font-semibold text-[#111827]">Statistical &amp; Database Analysis</h4>
+                  </div>
+                  <p class="text-xs sm:text-[13px] text-[#4B5563] leading-relaxed">
+                    Cleaning, querying, and modeling structured datasets using SQL, R, Python, and Advanced Excel.
+                  </p>
+                </div>
+
+                <!-- Focus Card 3 -->
+                <div class="p-5 rounded-xl border border-[#E5E7EB] bg-[#F8F9FA]/50 hover:border-[#1E293B]/30 transition-colors">
+                  <div class="flex items-center gap-3 mb-2.5">
+                    <div class="w-9 h-9 rounded-lg bg-white border border-[#E5E7EB] flex items-center justify-center text-[#0F766E] shrink-0">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                      </svg>
+                    </div>
+                    <h4 class="text-sm font-semibold text-[#111827]">Brand Strategy &amp; Content</h4>
+                  </div>
+                  <p class="text-xs sm:text-[13px] text-[#4B5563] leading-relaxed">
+                    Planning social media campaigns, copywriting, and visual storytelling backed by audience insights.
+                  </p>
+                </div>
+
+                <!-- Focus Card 4 -->
+                <div class="p-5 rounded-xl border border-[#E5E7EB] bg-[#F8F9FA]/50 hover:border-[#1E293B]/30 transition-colors">
+                  <div class="flex items-center gap-3 mb-2.5">
+                    <div class="w-9 h-9 rounded-lg bg-white border border-[#E5E7EB] flex items-center justify-center text-[#0F766E] shrink-0">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z" />
+                      </svg>
+                    </div>
+                    <h4 class="text-sm font-semibold text-[#111827]">Operations &amp; Documentation</h4>
+                  </div>
+                  <p class="text-xs sm:text-[13px] text-[#4B5563] leading-relaxed">
+                    Managing large participant databases, drafting formal agreements (MoU/SPK/TOR), and coordinating cross-functional teams.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <hr class="border-[#E5E7EB]" />
+
+          <!-- ===============================================================
+               SECTION 2: SELECTED WORK (PROJECTS)
+          ================================================================ -->
+          <section id="projects">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
+              <div>
+                <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-[#111827]">Selected Work</h2>
+                <div class="w-9 h-1 bg-[#0F766E] rounded-full mt-2"></div>
+              </div>
+
+              <!-- Minimalist Category Filter Pills -->
+              <div class="flex flex-wrap items-center gap-2" role="tablist" aria-label="Filter projects by category">
+                <button
+                  type="button"
+                  data-filter="all"
+                  class="project-filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-medium bg-[#1E293B] text-white border border-[#1E293B] transition-colors"
+                >
+                  All
+                </button>
+                <button
+                  type="button"
+                  data-filter="Data & BI"
+                  class="project-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-white text-[#4B5563] border border-[#E5E7EB] hover:border-[#1E293B] hover:text-[#111827] transition-colors"
+                >
+                  Data &amp; BI
+                </button>
+                <button
+                  type="button"
+                  data-filter="Branding & Web"
+                  class="project-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-white text-[#4B5563] border border-[#E5E7EB] hover:border-[#1E293B] hover:text-[#111827] transition-colors"
+                >
+                  Branding &amp; Web
+                </button>
+              </div>
+            </div>
+
+            <!-- 2-Column Project Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+              <!-- Project 1 -->
+              <article data-category="Data & BI" class="project-item rounded-xl border border-[#E5E7EB] bg-white p-5 flex flex-col justify-between hover:border-[#1E293B]/40 transition-colors">
+                <div>
+                  <div class="flex items-center justify-between gap-2 mb-3">
+                    <span class="font-mono text-[11px] font-medium text-[#0F766E] bg-[#0F766E]/10 px-2.5 py-0.5 rounded">
+                      Data &amp; BI
+                    </span>
+                    <span class="font-mono text-[11px] text-[#4B5563]">180.5K Rows</span>
+                  </div>
+                  <h3 class="text-base font-bold text-[#111827] leading-snug">
+                    Global Supply Chain &amp; Logistics Dashboard
+                  </h3>
+                  <p class="text-xs sm:text-[13px] text-[#4B5563] mt-2 leading-relaxed">
+                    Cleaned and modeled 180,511 transactional records (65,752 unique orders) across 17 variables, uncovering a 54.8% late delivery rate and mapping $36.78M total revenue across product categories.
+                  </p>
+                </div>
+
+                <div class="mt-5 pt-4 border-t border-[#E5E7EB] flex items-center justify-between gap-3">
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="font-mono text-[11px] text-[#4B5563] bg-[#F8F9FA] border border-[#E5E7EB] px-2 py-0.5 rounded">Power BI</span>
+                    <span class="font-mono text-[11px] text-[#4B5563] bg-[#F8F9FA] border border-[#E5E7EB] px-2 py-0.5 rounded">Excel</span>
+                  </div>
+                  <button
+                    type="button"
+                    data-project-index="0"
+                    class="view-details-btn shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-[#1E293B] hover:text-[#0F766E] transition-colors"
+                  >
+                    <span>View Details</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Project 2 -->
+              <article data-category="Data & BI" class="project-item rounded-xl border border-[#E5E7EB] bg-white p-5 flex flex-col justify-between hover:border-[#1E293B]/40 transition-colors">
+                <div>
+                  <div class="flex items-center justify-between gap-2 mb-3">
+                    <span class="font-mono text-[11px] font-medium text-[#0F766E] bg-[#0F766E]/10 px-2.5 py-0.5 rounded">
+                      Data &amp; BI
+                    </span>
+                    <span class="font-mono text-[11px] text-[#4B5563]">Geospatial</span>
+                  </div>
+                  <h3 class="text-base font-bold text-[#111827] leading-snug">
+                    Global Climate Action &amp; Disaster Impact Tracker
+                  </h3>
+                  <p class="text-xs sm:text-[13px] text-[#4B5563] mt-2 leading-relaxed">
+                    Built an interactive multi-year disaster tracker with custom calculated fields (Aid Coverage Ratio, Aid Gap), Geo Bubble Maps, and response-time scatter plots.
+                  </p>
+                </div>
+
+                <div class="mt-5 pt-4 border-t border-[#E5E7EB] flex items-center justify-between gap-3">
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="font-mono text-[11px] text-[#4B5563] bg-[#F8F9FA] border border-[#E5E7EB] px-2 py-0.5 rounded">Looker Studio</span>
+                    <span class="font-mono text-[11px] text-[#4B5563] bg-[#F8F9FA] border border-[#E5E7EB] px-2 py-0.5 rounded">Google Sheets</span>
+                  </div>
+                  <button
+                    type="button"
+                    data-project-index="1"
+                    class="view-details-btn shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-[#1E293B] hover:text-[#0F766E] transition-colors"
+                  >
+                    <span>View Details</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Project 3 -->
+              <article data-category="Data & BI" class="project-item rounded-xl border border-[#E5E7EB] bg-white p-5 flex flex-col justify-between hover:border-[#1E293B]/40 transition-colors">
+                <div>
+                  <div class="flex items-center justify-between gap-2 mb-3">
+                    <span class="font-mono text-[11px] font-medium text-[#0F766E] bg-[#0F766E]/10 px-2.5 py-0.5 rounded">
+                      Data &amp; BI
+                    </span>
+                    <span class="font-mono text-[11px] text-[#4B5563]">Analytics</span>
+                  </div>
+                  <h3 class="text-base font-bold text-[#111827] leading-snug">
+                    Spatial &amp; Statistical Modeling Workflows
+                  </h3>
+                  <p class="text-xs sm:text-[13px] text-[#4B5563] mt-2 leading-relaxed">
+                    Executed exploratory data analysis, relational database querying (DBeaver, MS Access), and spatial distribution storytelling for academic and business case studies.
+                  </p>
+                </div>
+
+                <div class="mt-5 pt-4 border-t border-[#E5E7EB] flex items-center justify-between gap-3">
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="font-mono text-[11px] text-[#4B5563] bg-[#F8F9FA] border border-[#E5E7EB] px-2 py-0.5 rounded">R</span>
+                    <span class="font-mono text-[11px] text-[#4B5563] bg-[#F8F9FA] border border-[#E5E7EB] px-2 py-0.5 rounded">Python</span>
+                    <span class="font-mono text-[11px] text-[#4B5563] bg-[#F8F9FA] border border-[#E5E7EB] px-2 py-0.5 rounded">SQL</span>
+                    <span class="font-mono text-[11px] text-[#4B5563] bg-[#F8F9FA] border border-[#E5E7EB] px-2 py-0.5 rounded">Tableau</span>
+                    <span class="font-mono text-[11px] text-[#4B5563] bg-[#F8F9FA] border border-[#E5E7EB] px-2 py-0.5 rounded">GeoDa</span>
+                  </div>
+                  <button
+                    type="button"
+                    data-project-index="2"
+                    class="view-details-btn shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-[#1E293B] hover:text-[#0F766E] transition-colors"
+                  >
+                    <span>View Details</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Project 4 -->
+              <article data-category="Branding & Web" class="project-item rounded-xl border border-[#E5E7EB] bg-white p-5 flex flex-col justify-between hover:border-[#1E293B]/40 transition-colors">
+                <div>
+                  <div class="flex items-center justify-between gap-2 mb-3">
+                    <span class="font-mono text-[11px] font-medium text-[#1E293B] bg-[#1E293B]/10 px-2.5 py-0.5 rounded">
+                      Branding &amp; Web
+                    </span>
+                    <span class="font-mono text-[11px] text-[#4B5563]">2024</span>
+                  </div>
+                  <h3 class="text-base font-bold text-[#111827] leading-snug">
+                    OLFACTION 2024 Brand Identity &amp; Campaign
+                  </h3>
+                  <p class="text-xs sm:text-[13px] text-[#4B5563] mt-2 leading-relaxed">
+                    Led an 8-person branding team and served as Webinar PIC and on-camera talent, aligning visual guidelines and promotional content for 100+ participants.
+                  </p>
+                </div>
+
+                <div class="mt-5 pt-4 border-t border-[#E5E7EB] flex items-center justify-between gap-3">
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="font-mono text-[11px] text-[#4B5563] bg-[#F8F9FA] border border-[#E5E7EB] px-2 py-0.5 rounded">Content Strategy</span>
+                    <span class="font-mono text-[11px] text-[#4B5563] bg-[#F8F9FA] border border-[#E5E7EB] px-2 py-0.5 rounded">Canva</span>
+                  </div>
+                  <button
+                    type="button"
+                    data-project-index="3"
+                    class="view-details-btn shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-[#1E293B] hover:text-[#0F766E] transition-colors"
+                  >
+                    <span>View Details</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Project 5 -->
+              <article data-category="Branding & Web" class="project-item rounded-xl border border-[#E5E7EB] bg-white p-5 flex flex-col justify-between hover:border-[#1E293B]/40 transition-colors">
+                <div>
+                  <div class="flex items-center justify-between gap-2 mb-3">
+                    <span class="font-mono text-[11px] font-medium text-[#1E293B] bg-[#1E293B]/10 px-2.5 py-0.5 rounded">
+                      Branding &amp; Web
+                    </span>
+                    <span class="font-mono text-[11px] text-[#4B5563]">UI / Web</span>
+                  </div>
+                  <h3 class="text-base font-bold text-[#111827] leading-snug">
+                    Responsive Web &amp; UI Layout Design
+                  </h3>
+                  <p class="text-xs sm:text-[13px] text-[#4B5563] mt-2 leading-relaxed">
+                    Built functional, user-friendly websites with clean navigation structure, responsive layouts, and cohesive visual hierarchy.
+                  </p>
+                </div>
+
+                <div class="mt-5 pt-4 border-t border-[#E5E7EB] flex items-center justify-between gap-3">
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="font-mono text-[11px] text-[#4B5563] bg-[#F8F9FA] border border-[#E5E7EB] px-2 py-0.5 rounded">WordPress</span>
+                    <span class="font-mono text-[11px] text-[#4B5563] bg-[#F8F9FA] border border-[#E5E7EB] px-2 py-0.5 rounded">HTML/CSS</span>
+                  </div>
+                  <button
+                    type="button"
+                    data-project-index="4"
+                    class="view-details-btn shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-[#1E293B] hover:text-[#0F766E] transition-colors"
+                  >
+                    <span>View Details</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+            </div>
+          </section>
+
+          <hr class="border-[#E5E7EB]" />
+
+          <!-- ===============================================================
+               SECTION 3: EXPERIENCE, EDUCATION & SKILLS
+          ================================================================ -->
+          <section id="experience">
+            <div class="mb-7">
+              <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-[#111827]">Experience &amp; Education</h2>
+              <div class="w-9 h-1 bg-[#0F766E] rounded-full mt-2"></div>
+            </div>
+
+            <!-- Vertical Timeline -->
+            <div class="relative pl-6 border-l border-[#E5E7EB] space-y-7">
+
+              <!-- Timeline Item 1: Education -->
+              <div class="relative">
+                <span class="absolute -left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-[#0F766E] ring-4 ring-white"></span>
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+                  <h3 class="text-base font-bold text-[#111827]">Institut Teknologi Sepuluh Nopember (ITS)</h3>
+                  <span class="font-mono text-xs text-[#0F766E] font-medium">Aug 2023 – Aug 2027 (Expected)</span>
+                </div>
+                <p class="text-sm font-medium text-[#1E293B] mt-0.5">
+                  Bachelor of Applied Science (D4) in Business Statistics
+                </p>
+                <p class="text-xs sm:text-[13px] text-[#4B5563] mt-2 leading-relaxed">
+                  Completed structured campus leadership, scientific writing, and entrepreneurship trainings:
+                  <span class="font-mono text-[12px] text-[#111827]">LKMM-TD, PKTI-TD, LKMW, LKMM-TC</span>.
+                </p>
+              </div>
+
+              <!-- Timeline Item 2: OLFACTION 2024 -->
+              <div class="relative">
+                <span class="absolute -left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-[#1E293B] ring-4 ring-white"></span>
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+                  <h3 class="text-base font-bold text-[#111827]">OLFACTION 2024 (ITS)</h3>
+                  <span class="font-mono text-xs text-[#4B5563]">2024</span>
+                </div>
+                <p class="text-sm font-medium text-[#0F766E] mt-0.5">
+                  Head of Branding Division &amp; Webinar PIC
+                </p>
+                <ul class="mt-2 space-y-1 text-xs sm:text-[13px] text-[#4B5563] list-disc list-inside leading-relaxed">
+                  <li>Led an 8-person branding team in visual identity, content planning, and on-camera social media production.</li>
+                  <li>Managed the OLFACTION 2024 Webinar end-to-end, drafting event rundowns, speaker TORs, and external outreach for 100+ participants.</li>
+                </ul>
+              </div>
+
+              <!-- Timeline Item 3: WEVO 2024 -->
+              <div class="relative">
+                <span class="absolute -left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-[#1E293B] ring-4 ring-white"></span>
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+                  <h3 class="text-base font-bold text-[#111827]">WEVO 2024 (Faculty of Vocational Studies, ITS)</h3>
+                  <span class="font-mono text-xs text-[#4B5563]">2024</span>
+                </div>
+                <p class="text-sm font-medium text-[#0F766E] mt-0.5">
+                  Secretariat (Kestari) Staff
+                </p>
+                <ul class="mt-2 space-y-1 text-xs sm:text-[13px] text-[#4B5563] list-disc list-inside leading-relaxed">
+                  <li>Verified, organized, and maintained centralized onboarding databases for 300+ incoming freshmen with 100% data accuracy.</li>
+                  <li>Acted as primary information liaison and mentor guiding new students through faculty orientation workflows.</li>
+                </ul>
+              </div>
+
+              <!-- Timeline Item 4: Dies Natalis KOPMA ITS 2024 -->
+              <div class="relative">
+                <span class="absolute -left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-[#1E293B] ring-4 ring-white"></span>
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+                  <h3 class="text-base font-bold text-[#111827]">Dies Natalis KOPMA ITS 2024</h3>
+                  <span class="font-mono text-xs text-[#4B5563]">2024</span>
+                </div>
+                <p class="text-sm font-medium text-[#0F766E] mt-0.5">
+                  Sponsorship &amp; Partnership Staff
+                </p>
+                <ul class="mt-2 space-y-1 text-xs sm:text-[13px] text-[#4B5563] list-disc list-inside leading-relaxed">
+                  <li>Drafted formal partnership proposals, Memoranda of Understanding (MoU), and cooperation agreements (SPK).</li>
+                  <li>Executed external outreach and negotiated deliverables with corporate sponsors and media partners.</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- Technical & Core Skills Grouped Pill List -->
+            <div class="mt-10 pt-8 border-t border-[#E5E7EB]">
+              <h3 class="text-base font-semibold text-[#111827] mb-5">Technical &amp; Core Skills</h3>
+
+              <div class="space-y-4">
+                <!-- Group 1 -->
+                <div>
+                  <span class="font-mono text-xs font-medium text-[#4B5563] block mb-2">BI &amp; Analytics</span>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="font-mono text-xs text-[#111827] bg-[#F8F9FA] border border-[#E5E7EB] px-3 py-1.5 rounded-lg">Power BI</span>
+                    <span class="font-mono text-xs text-[#111827] bg-[#F8F9FA] border border-[#E5E7EB] px-3 py-1.5 rounded-lg">Looker Studio</span>
+                    <span class="font-mono text-xs text-[#111827] bg-[#F8F9FA] border border-[#E5E7EB] px-3 py-1.5 rounded-lg">Tableau</span>
+                    <span class="font-mono text-xs text-[#111827] bg-[#F8F9FA] border border-[#E5E7EB] px-3 py-1.5 rounded-lg">GeoDa</span>
+                    <span class="font-mono text-xs text-[#111827] bg-[#F8F9FA] border border-[#E5E7EB] px-3 py-1.5 rounded-lg">Microsoft Excel (Advanced, Pivot, Power Query)</span>
+                  </div>
+                </div>
+
+                <!-- Group 2 -->
+                <div>
+                  <span class="font-mono text-xs font-medium text-[#4B5563] block mb-2">Programming &amp; Databases</span>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="font-mono text-xs text-[#111827] bg-[#F8F9FA] border border-[#E5E7EB] px-3 py-1.5 rounded-lg">SQL</span>
+                    <span class="font-mono text-xs text-[#111827] bg-[#F8F9FA] border border-[#E5E7EB] px-3 py-1.5 rounded-lg">R</span>
+                    <span class="font-mono text-xs text-[#111827] bg-[#F8F9FA] border border-[#E5E7EB] px-3 py-1.5 rounded-lg">Python</span>
+                    <span class="font-mono text-xs text-[#111827] bg-[#F8F9FA] border border-[#E5E7EB] px-3 py-1.5 rounded-lg">DBeaver</span>
+                    <span class="font-mono text-xs text-[#111827] bg-[#F8F9FA] border border-[#E5E7EB] px-3 py-1.5 rounded-lg">Microsoft Access</span>
+                  </div>
+                </div>
+
+                <!-- Group 3 -->
+                <div>
+                  <span class="font-mono text-xs font-medium text-[#4B5563] block mb-2">Branding &amp; Web</span>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="font-mono text-xs text-[#111827] bg-[#F8F9FA] border border-[#E5E7EB] px-3 py-1.5 rounded-lg">WordPress</span>
+                    <span class="font-mono text-xs text-[#111827] bg-[#F8F9FA] border border-[#E5E7EB] px-3 py-1.5 rounded-lg">HTML/CSS</span>
+                    <span class="font-mono text-xs text-[#111827] bg-[#F8F9FA] border border-[#E5E7EB] px-3 py-1.5 rounded-lg">Canva</span>
+                    <span class="font-mono text-xs text-[#111827] bg-[#F8F9FA] border border-[#E5E7EB] px-3 py-1.5 rounded-lg">Copywriting</span>
+                    <span class="font-mono text-xs text-[#111827] bg-[#F8F9FA] border border-[#E5E7EB] px-3 py-1.5 rounded-lg">Content Planning</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <hr class="border-[#E5E7EB]" />
+
+          <!-- ===============================================================
+               SECTION 4: CONTACT
+          ================================================================ -->
+          <section id="contact">
+            <div class="mb-5">
+              <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-[#111827]">Get in Touch</h2>
+              <div class="w-9 h-1 bg-[#0F766E] rounded-full mt-2"></div>
+            </div>
+
+            <p class="text-sm sm:text-[15px] text-[#4B5563] leading-relaxed mb-6">
+              I am actively seeking 2027 internship opportunities (January–July 2027) in Business Analytics, Business Intelligence, Supply Chain/Operations, or Digital Media. Feel free to reach out directly via email or the form below.
+            </p>
+
+            <!-- Static-Compatible Mailto Contact Form -->
+            <form id="contactForm" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="contactName" class="block text-xs font-medium text-[#111827] mb-1.5">Name</label>
+                  <input
+                    id="contactName"
+                    name="name"
+                    type="text"
+                    required
+                    placeholder="Your full name"
+                    class="w-full px-3.5 py-2.5 rounded-xl border border-[#E5E7EB] bg-[#F8F9FA]/60 text-sm text-[#111827] placeholder-[#9CA3AF] focus:bg-white focus:outline-none focus:border-[#0F766E] transition-colors"
+                  />
+                </div>
+                <div>
+                  <label for="contactEmail" class="block text-xs font-medium text-[#111827] mb-1.5">Email</label>
+                  <input
+                    id="contactEmail"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="you@company.com"
+                    class="w-full px-3.5 py-2.5 rounded-xl border border-[#E5E7EB] bg-[#F8F9FA]/60 text-sm text-[#111827] placeholder-[#9CA3AF] focus:bg-white focus:outline-none focus:border-[#0F766E] transition-colors"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="contactSubject" class="block text-xs font-medium text-[#111827] mb-1.5">Subject</label>
+                <input
+                  id="contactSubject"
+                  name="subject"
+                  type="text"
+                  required
+                  placeholder="2027 Internship Opportunity — Business Analyst"
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-[#E5E7EB] bg-[#F8F9FA]/60 text-sm text-[#111827] placeholder-[#9CA3AF] focus:bg-white focus:outline-none focus:border-[#0F766E] transition-colors"
+                />
+              </div>
+
+              <div>
+                <label for="contactMessage" class="block text-xs font-medium text-[#111827] mb-1.5">Message</label>
+                <textarea
+                  id="contactMessage"
+                  name="message"
+                  rows="4"
+                  required
+                  placeholder="Write your message here..."
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-[#E5E7EB] bg-[#F8F9FA]/60 text-sm text-[#111827] placeholder-[#9CA3AF] focus:bg-white focus:outline-none focus:border-[#0F766E] transition-colors resize-none"
+                ></textarea>
+              </div>
+
+              <div class="flex flex-wrap items-center justify-between gap-4 pt-1">
+                <button
+                  type="submit"
+                  class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#1E293B] hover:bg-[#0F766E] text-white text-sm font-medium transition-colors"
+                >
+                  <span>Send via Email Client</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+                  </svg>
+                </button>
+                <span id="formStatusNote" class="text-xs text-[#0F766E] font-medium hidden">
+                  Opening your default email application...
+                </span>
+              </div>
+            </form>
+          </section>
+
+        </div>
+
+        <!-- Subtle Footer Inside Card -->
+        <footer class="border-t border-[#E5E7EB] bg-[#F8F9FA]/60 px-6 sm:px-9 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[#4B5563]">
+          <span>© 2026 Diajeng Ayu Asmara Mudjahidin</span>
+          <span class="font-mono text-[11px]">Surabaya, Indonesia</span>
+        </footer>
+      </main>
+
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       PROJECT DETAILS MODAL DIALOG
+  ====================================================================== -->
+  <div
+    id="projectModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalProjectTitle"
+    class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-[#111827]/40 backdrop-blur-[2px]"
+  >
+    <div class="relative w-full max-w-xl max-h-[90vh] overflow-y-auto bg-white border border-[#E5E7EB] rounded-2xl p-6 sm:p-7 shadow-xl">
+      <!-- Close Button -->
+      <button
+        id="closeModalBtn"
+        type="button"
+        aria-label="Close modal"
+        class="absolute top-5 right-5 p-1.5 rounded-lg text-[#4B5563] hover:text-[#111827] hover:bg-[#F8F9FA] transition-colors"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Category Badge -->
+      <span id="modalCategory" class="inline-block font-mono text-[11px] font-medium text-[#0F766E] bg-[#0F766E]/10 px-2.5 py-0.5 rounded mb-3">
+        Data &amp; BI
+      </span>
+
+      <!-- Project Title -->
+      <h3 id="modalProjectTitle" class="text-lg sm:text-xl font-bold text-[#111827] pr-8">
+        Project Title
+      </h3>
+
+      <!-- Tools Used -->
+      <div id="modalTools" class="flex flex-wrap gap-1.5 mt-3">
+        <!-- Populated by JavaScript -->
+      </div>
+
+      <!-- Overview -->
+      <div class="mt-5">
+        <h4 class="font-mono text-[11px] uppercase tracking-wider text-[#4B5563] mb-1.5">Overview</h4>
+        <p id="modalOverview" class="text-sm text-[#4B5563] leading-relaxed">
+          Project overview text.
+        </p>
+      </div>
+
+      <!-- Key Outcomes / Metrics -->
+      <div class="mt-5 p-4 rounded-xl bg-[#F8F9FA] border border-[#E5E7EB]">
+        <h4 class="font-mono text-[11px] uppercase tracking-wider text-[#111827] font-semibold mb-2">Key Outcomes &amp; Metrics</h4>
+        <ul id="modalOutcomes" class="space-y-1.5 text-xs sm:text-[13px] text-[#4B5563] list-disc list-inside leading-relaxed">
+          <!-- Populated by JavaScript -->
+        </ul>
+      </div>
+
+      <!-- Modal Footer Actions -->
+      <div class="mt-6 pt-4 border-t border-[#E5E7EB] flex flex-wrap items-center justify-between gap-3">
+        <a
+          id="modalExternalLink"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#1E293B] hover:bg-[#0F766E] text-white text-xs sm:text-sm font-medium transition-colors"
+        >
+          <span>Open Live Dashboard / Repository</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+          </svg>
+        </a>
+
+        <button
+          id="closeModalSecondaryBtn"
+          type="button"
+          class="px-4 py-2.5 rounded-xl border border-[#E5E7EB] text-xs sm:text-sm font-medium text-[#4B5563] hover:text-[#111827] hover:border-[#1E293B] transition-colors"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       VANILLA JAVASCRIPT (Copy Email, Filter Projects, Modal, Active Tabs)
+  ====================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // -------------------------------------------------------------------
+      // 1. Copy Email Button (Uses execCommand for reliable iframe/web support)
+      // -------------------------------------------------------------------
+      const copyEmailBtn = document.getElementById('copyEmailBtn');
+      if (copyEmailBtn) {
+        copyEmailBtn.addEventListener('click', () => {
+          const email = 'diajengayuam@gmail.com';
+          const tempInput = document.createElement('textarea');
+          tempInput.value = email;
+          tempInput.setAttribute('readonly', '');
+          tempInput.style.position = 'absolute';
+          tempInput.style.left = '-9999px';
+          document.body.appendChild(tempInput);
+          tempInput.select();
+
+          try {
+            document.execCommand('copy');
+            copyEmailBtn.textContent = 'Copied';
+            setTimeout(() => {
+              copyEmailBtn.textContent = 'Copy';
+            }, 2000);
+          } catch (err) {
+            copyEmailBtn.textContent = 'Copied';
+          }
+          document.body.removeChild(tempInput);
+        });
+      }
+
+      // -------------------------------------------------------------------
+      // 2. Project Category Filter Pills
+      // -------------------------------------------------------------------
+      const filterBtns = document.querySelectorAll('.project-filter-btn');
+      const projectItems = document.querySelectorAll('.project-item');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filterValue = btn.getAttribute('data-filter');
+
+          // Update active button state
+          filterBtns.forEach(b => {
+            b.classList.remove('active', 'bg-[#1E293B]', 'text-white', 'border-[#1E293B]');
+            b.classList.add('bg-white', 'text-[#4B5563]', 'border-[#E5E7EB]');
+          });
+          btn.classList.add('active', 'bg-[#1E293B]', 'text-white', 'border-[#1E293B]');
+          btn.classList.remove('bg-white', 'text-[#4B5563]', 'border-[#E5E7EB]');
+
+          // Show/hide project cards
+          projectItems.forEach(card => {
+            const category = card.getAttribute('data-category');
+            if (filterValue === 'all' || category === filterValue) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      // -------------------------------------------------------------------
+      // 3. Project Case Study Data & Modal Controls
+      //    HOW TO ADD YOUR LIVE LINKS:
+      //    Replace the "liveUrl" values below with your Power BI, Looker Studio,
+      //    GitHub, or Google Drive URLs.
+      // -------------------------------------------------------------------
+      const projectData = [
+        {
+          category: 'Data & BI',
+          title: 'Global Supply Chain & Logistics Dashboard',
+          tools: ['Power BI', 'Microsoft Excel', 'Power Query', 'Data Modeling'],
+          overview: 'End-to-end data cleaning and business intelligence dashboard built from the DataCo Global Supply Chain dataset. Streamlined over 50 raw variables down to 17 clean operational and financial fields to evaluate revenue drivers and shipping performance.',
+          outcomes: [
+            'Cleaned and modeled 180,511 transactional records (65,752 unique orders) with zero duplicate entries.',
+            'Tracked 6 core executive KPIs, including $36.78M total revenue, $3.97M net profit (10.8% margin), and order fulfillment rates.',
+            'Uncovered a 54.8% late delivery rate (3.50 actual vs. 2.93 scheduled shipping days) and identified top-performing categories (Fishing, Cleats, Camping & Hiking).'
+          ],
+          liveUrl: 'https://app.powerbi.com/' // <-- Replace with your Power BI public link
+        },
+        {
+          category: 'Data & BI',
+          title: 'Global Climate Action & Disaster Impact Tracker',
+          tools: ['Google Looker Studio', 'Google Sheets', 'Calculated Fields'],
+          overview: 'Interactive multi-year global climate disaster tracker designed to evaluate humanitarian impact, emergency response agility, and international aid distribution across countries and disaster types.',
+          outcomes: [
+            'Engineered custom calculated fields including Total Casualties, Aid Gap (USD), and Aid Coverage Ratio (%).',
+            'Designed Geo Bubble Maps, annual trend charts, and response-time vs. severity scatter plots with cross-filtering enabled.',
+            'Built conditional heatmap tables to highlight high-impact events and regional aid disparities.'
+          ],
+          liveUrl: 'https://lookerstudio.google.com/' // <-- Replace with your Looker Studio public link
+        },
+        {
+          category: 'Data & BI',
+          title: 'Spatial & Statistical Modeling Workflows',
+          tools: ['R', 'Python', 'SQL', 'Tableau', 'GeoDa', 'DBeaver', 'MS Access'],
+          overview: 'Collection of quantitative coursework and business analytics case studies combining relational database management, statistical modeling, and spatial data visualization.',
+          outcomes: [
+            'Structured and queried multi-table relational databases using SQL, DBeaver, and Microsoft Access.',
+            'Automated data cleaning, exploratory analysis, and regression modeling workflows in R and Python.',
+            'Built regional sales dashboards in Tableau and spatial cluster maps in GeoDa for geographic storytelling.'
+          ],
+          liveUrl: 'https://github.com/' // <-- Replace with your GitHub repository link
+        },
+        {
+          category: 'Branding & Web',
+          title: 'OLFACTION 2024 Brand Identity & Campaign',
+          tools: ['Content Strategy', 'Copywriting', 'Canva', 'Instagram Reels', 'Event Operations'],
+          overview: 'Led visual identity, editorial content planning, and webinar execution for OLFACTION 2024 at ITS, combining creative direction with structured operational coordination.',
+          outcomes: [
+            'Managed an 8-person branding team to produce cohesive visual guidelines and promotional social media assets.',
+            'Appeared as on-camera talent and scripted short-form promotional videos to increase audience engagement.',
+            'Served as Webinar PIC—drafting speaker Terms of Reference (TOR), event rundowns, and outreach for 100+ participants.'
+          ],
+          liveUrl: 'https://drive.google.com/' // <-- Replace with your Google Drive / Canva portfolio link
+        },
+        {
+          category: 'Branding & Web',
+          title: 'Responsive Web & UI Layout Design',
+          tools: ['WordPress', 'HTML/CSS', 'UI/UX Layout', 'Content Architecture'],
+          overview: 'Designed and built clean, responsive web pages focused on clear information hierarchy, intuitive navigation, and cross-device usability.',
+          outcomes: [
+            'Structured page layouts and navigation menus to improve content readability on desktop and mobile screens.',
+            'Applied consistent typography, spacing, and visual hierarchy aligned with organizational branding.'
+          ],
+          liveUrl: 'https://drive.google.com/' // <-- Replace with your live website or showcase link
+        }
+      ];
+
+      const projectModal = document.getElementById('projectModal');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const closeModalSecondaryBtn = document.getElementById('closeModalSecondaryBtn');
+      const viewDetailsBtns = document.querySelectorAll('.view-details-btn');
+
+      function openProjectModal(index) {
+        const project = projectData[index];
+        if (!project) return;
+
+        document.getElementById('modalCategory').textContent = project.category;
+        document.getElementById('modalProjectTitle').textContent = project.title;
+        document.getElementById('modalOverview').textContent = project.overview;
+
+        const toolsContainer = document.getElementById('modalTools');
+        toolsContainer.innerHTML = project.tools
+          .map(tool => `<span class="font-mono text-[11px] text-[#4B5563] bg-[#F8F9FA] border border-[#E5E7EB] px-2.5 py-0.5 rounded">${tool}</span>`)
+          .join('');
+
+        const outcomesContainer = document.getElementById('modalOutcomes');
+        outcomesContainer.innerHTML = project.outcomes
+          .map(item => `<li>${item}</li>`)
+          .join('');
+
+        const externalLink = document.getElementById('modalExternalLink');
+        externalLink.href = project.liveUrl;
+
+        projectModal.classList.remove('hidden');
+        projectModal.classList.add('flex');
+      }
+
+      function closeProjectModal() {
+        projectModal.classList.add('hidden');
+        projectModal.classList.remove('flex');
+      }
+
+      viewDetailsBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const idx = parseInt(btn.getAttribute('data-project-index'), 10);
+          openProjectModal(idx);
+        });
+      });
+
+      closeModalBtn.addEventListener('click', closeProjectModal);
+      closeModalSecondaryBtn.addEventListener('click', closeProjectModal);
+
+      projectModal.addEventListener('click', (e) => {
+        if (e.target === projectModal) closeProjectModal();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !projectModal.classList.contains('hidden')) {
+          closeProjectModal();
+        }
+      });
+
+      // -------------------------------------------------------------------
+      // 4. Static Mailto Contact Form Handler (Works on GitHub Pages)
+      // -------------------------------------------------------------------
+      const contactForm = document.getElementById('contactForm');
+      const formStatusNote = document.getElementById('formStatusNote');
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('contactName').value.trim();
+          const email = document.getElementById('contactEmail').value.trim();
+          const subject = document.getElementById('contactSubject').value.trim();
+          const message = document.getElementById('contactMessage').value.trim();
+
+          const bodyText = `Hello Diajeng,\n\n${message}\n\nBest regards,\n${name} (${email})`;
+          const mailtoUrl = `mailto:diajengayuam@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+
+          formStatusNote.classList.remove('hidden');
+          window.location.href = mailtoUrl;
+        });
+      }
+
+      // -------------------------------------------------------------------
+      // 5. Active Navigation Tab Highlight on Scroll
+      // -------------------------------------------------------------------
+      const sections = document.querySelectorAll('section[id]');
+      const navTabs = document.querySelectorAll('.nav-tab');
+
+      function setActiveTab(sectionId) {
+        navTabs.forEach(tab => {
+          const target = tab.getAttribute('data-nav-target');
+          if (target === sectionId) {
+            tab.classList.add('border-[#0F766E]', 'text-[#111827]', 'font-semibold');
+            tab.classList.remove('border-transparent', 'text-[#4B5563]');
+          } else {
+            tab.classList.remove('border-[#0F766E]', 'text-[#111827]', 'font-semibold');
+            tab.classList.add('border-transparent', 'text-[#4B5563]');
+          }
+        });
+      }
+
+      navTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const target = tab.getAttribute('data-nav-target');
+          setActiveTab(target);
+        });
+      });
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                setActiveTab(entry.target.id);
+              }
+            });
+          },
+          { rootMargin: '-25% 0px -60% 0px' }
+        );
+        sections.forEach(sec => observer.observe(sec));
+      }
+    });
+  </script>
+</body>
+</html>
