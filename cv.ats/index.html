@@ -16,20 +16,20 @@
       font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       background-color: #f1f5f9;
       color: #1e293b;
-      line-height: 1.38;
-      font-size: 9.5pt;
+      line-height: 1.45;
+      font-size: 10pt;
       display: flex;
       justify-content: center;
-      padding: 20px;
+      padding: 24px;
     }
 
-    /* Kanvas Kertas A4 */
+    /* Kanvas Kertas A4 (Fleksibel Multi-Halaman) */
     .cv-container {
       background-color: #ffffff;
       width: 210mm;
       min-height: 297mm;
-      padding: 13mm 15mm;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 15mm 16mm;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
     }
 
     /* Header: Info Kiri + Foto Kanan */
@@ -37,10 +37,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 18px;
-      border-bottom: 1.8px solid #0f172a;
-      padding-bottom: 10px;
-      margin-bottom: 10px;
+      gap: 20px;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+      break-inside: avoid;
+      page-break-inside: avoid;
     }
 
     .header-info {
@@ -48,24 +50,24 @@
     }
 
     .header-info h1 {
-      font-size: 16.5pt;
+      font-size: 17.5pt;
       font-weight: 700;
       color: #0f172a;
       letter-spacing: 0.3px;
-      margin-bottom: 2px;
+      margin-bottom: 3px;
     }
 
     .header-info .role {
-      font-size: 10.5pt;
+      font-size: 11pt;
       font-weight: 600;
       color: #0369a1;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
     }
 
     .header-info .contact {
-      font-size: 8.8pt;
+      font-size: 9.2pt;
       color: #334155;
-      line-height: 1.45;
+      line-height: 1.5;
     }
 
     .header-info .contact a {
@@ -77,23 +79,23 @@
       text-decoration: underline;
     }
 
-    /* Styling Tautan Klik Bukti (Clickable Proof Links) */
+    /* Tautan Klik Bukti (Clickable Proof Links) */
     .proof-link {
       color: #0369a1;
       font-weight: 600;
       font-style: normal;
       text-decoration: none;
-      font-size: 8.8pt;
+      font-size: 9pt;
     }
 
     .proof-link:hover {
       text-decoration: underline;
     }
 
-    /* Styling Foto Profil */
+    /* Foto Profil */
     .header-photo img {
-      width: 82px;
-      height: 102px;
+      width: 86px;
+      height: 108px;
       object-fit: cover;
       object-position: top;
       border-radius: 5px;
@@ -103,39 +105,55 @@
 
     /* Section Headings */
     .section {
-      margin-bottom: 9px;
+      margin-bottom: 13px;
     }
 
     .section-title {
-      font-size: 10pt;
+      font-size: 10.5pt;
       font-weight: 700;
       text-transform: uppercase;
       color: #0f172a;
-      border-bottom: 1px solid #94a3b8;
-      padding-bottom: 2px;
-      margin-bottom: 5px;
+      border-bottom: 1.2px solid #94a3b8;
+      padding-bottom: 3px;
+      margin-bottom: 7px;
       letter-spacing: 0.5px;
+      break-after: avoid;
+      page-break-after: avoid;
     }
 
     /* Summary */
     .summary-text {
       text-align: justify;
-      font-size: 9.2pt;
+      font-size: 9.6pt;
       color: #1e293b;
     }
 
     /* Item Entries (Education, Projects, Experience) */
     .entry {
-      margin-bottom: 6px;
+      margin-bottom: 9px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
     }
 
     .entry-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
+      gap: 12px;
       font-weight: 700;
-      font-size: 9.5pt;
+      font-size: 9.8pt;
       color: #0f172a;
+    }
+
+    .entry-date {
+      white-space: nowrap;
+      font-weight: 600;
+      font-size: 9.3pt;
+      color: #334155;
     }
 
     .entry-sub {
@@ -143,37 +161,37 @@
       justify-content: space-between;
       align-items: baseline;
       font-style: italic;
-      font-size: 9pt;
+      font-size: 9.4pt;
       color: #475569;
-      margin-bottom: 2px;
+      margin-bottom: 3px;
     }
 
     ul {
-      padding-left: 16px;
+      padding-left: 17px;
       margin-top: 2px;
     }
 
     li {
-      margin-bottom: 2px;
+      margin-bottom: 3px;
       text-align: justify;
-      font-size: 9.1pt;
+      font-size: 9.5pt;
     }
 
-    /* Skills Grid */
+    /* Skills List */
     .skills-list {
       list-style: none;
       padding-left: 0;
     }
 
     .skills-list li {
-      margin-bottom: 2.5px;
+      margin-bottom: 4px;
       text-align: left;
     }
 
-    /* Pengaturan Khusus Saat Print / Save as PDF */
+    /* Pengaturan Khusus Saat Print / Save as PDF (Multi-Halaman Rapi) */
     @page {
       size: A4;
-      margin: 0;
+      margin: 14mm 15mm;
     }
 
     @media print {
@@ -185,7 +203,7 @@
         width: 100%;
         min-height: auto;
         box-shadow: none;
-        padding: 12mm 14mm;
+        padding: 0;
       }
       .proof-link {
         color: #0369a1 !important;
@@ -202,14 +220,13 @@
         <h1>DIAJENG AYU ASMARA MUDJAHIDIN</h1>
         <div class="role">Business Analyst &amp; Data Analytics Intern</div>
         <div class="contact">
-          Surabaya, East Java (Willing to Relocate to Jakarta) &bull; 
-          +62 889-9685-4896 &bull; diajengayuam@gmail.com<br>
-          <a href="https://linkedin.com/in/diajengayuam" target="_blank">linkedin.com/in/diajengayuam</a> &bull;
-          <a href="https://diajengayuam.github.io/portofolio-diajeng/" target="_blank">diajengayuam.github.io/portofolio-diajeng</a>
+          Surabaya, East Java (Willing to Relocate to Jakarta) &bull; +62 889-9685-4896 &bull; diajengayuam@gmail.com<br>
+          <a href="https://diajengayuam.github.io/portofolio-diajeng/" target="_blank" rel="noopener noreferrer">diajengayuam.github.io/portofolio-diajeng</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
       <div class="header-photo">
-        <img src="../assets/img/foto-diajeng.jpg" alt="Diajeng Ayu Asmara Mudjahidin">
+        <img src="../assets/img/foto-diajeng.jpg" alt="Diajeng Ayu Asmara Mudjahidin" onerror="this.style.display='none'">
       </div>
     </header>
 
@@ -217,7 +234,7 @@
     <section class="section">
       <h2 class="section-title">Professional Summary</h2>
       <p class="summary-text">
-        Analytical Business Statistics undergraduate student at Institut Teknologi Sepuluh Nopember (ITS) (GPA <strong>[3.16]</strong>/4.00, Expected Graduation: August 2027) seeking a Business Analyst Internship (Available January–July 2027). Proficient in Microsoft Excel (Advanced, Power Query, Pivot Tables), Power BI, Google Looker Studio, SQL, Python, R, and Tableau for data cleaning, exploratory data analysis, KPI reporting, and commercial trend evaluation. Proven ability to transform 180,000+ transactional records into executive dashboards, combined with leadership experience managing an 8-person branding team and negotiating external partnerships.
+        Analytical Business Statistics undergraduate student at Institut Teknologi Sepuluh Nopember (ITS) (GPA <strong>3.16</strong>/4.00, Expected Graduation: August 2027) seeking a Business Analyst Internship (Available January–July 2027). Proficient in Microsoft Excel (Advanced, Power Query, Pivot Tables), Power BI, Google Looker Studio, SQL, Python, R, and Tableau for data cleaning, exploratory data analysis, KPI reporting, and commercial trend evaluation. Proven ability to transform 180,000+ transactional records into executive dashboards, combined with leadership experience managing a 9-member branding team, leading large-scale student events, and negotiating external partnerships.
       </p>
     </section>
 
@@ -227,26 +244,26 @@
       <div class="entry">
         <div class="entry-header">
           <span>Institut Teknologi Sepuluh Nopember (ITS) — Surabaya, Indonesia</span>
-          <span>Aug 2023 – Aug 2027 (Expected)</span>
+          <span class="entry-date">Aug 2023 – Aug 2027 (Expected)</span>
         </div>
         <div class="entry-sub">
           <span>Bachelor of Applied Science (D4) in Business Statistics</span>
-          <span>GPA: [3.16] / 4.00</span>
+          <span>GPA: 3.16 / 4.00</span>
         </div>
         <ul>
           <li><strong>Relevant Coursework:</strong> Business Forecasting, Statistical Quality Control, Econometrics, Database Management, Quantitative Methods.</li>
-          <li><strong>Leadership &amp; Management Trainings:</strong> LKMM-TD ITS (Basic Student Leadership &amp; Management Training), PKTI-TD ITS, LKMW ITS.</li>
+          <li><strong>Leadership &amp; Management Trainings:</strong> LKMM-TD ITS (Basic Student Leadership &amp; Management Training), LKMM-TC, PKTI-TD ITS, LKMW ITS.</li>
         </ul>
       </div>
     </section>
 
-    <!-- DATA ANALYTICS & BI PROJECTS -->
+    <!-- DATA ANALYTICS, BI & PRODUCT PROJECTS -->
     <section class="section">
-      
+      <h2 class="section-title">Data Analytics, BI &amp; Product Projects</h2>
       <div class="entry">
         <div class="entry-header">
-          <span>Global Climate Action &amp; Disaster Impact Tracker | Google Looker Studio &amp; Google Sheets <a href="https://datastudio.google.com/reporting/10bfedea-4d61-4006-a42e-33f6c5270903" target="_blank" class="proof-link">[Live Dashboard]</a></span>
-         
+          <span>Global Climate Action &amp; Disaster Impact Tracker | Google Looker Studio &amp; Google Sheets <a href="https://datastudio.google.com/reporting/10bfedea-4d61-4006-a42e-33f6c5270903" target="_blank" rel="noopener noreferrer" class="proof-link">[Live Dashboard]</a></span>
+          <span class="entry-date">2026</span>
         </div>
         <ul>
           <li>Engineered custom calculated fields (<em>Total Casualties</em>, <em>Aid Gap</em>, and <em>Aid Coverage Ratio</em>) to evaluate multi-year global disaster impacts, emergency response times, and international financial aid distribution.</li>
@@ -256,56 +273,140 @@
 
       <div class="entry">
         <div class="entry-header">
-          <span>Statistical Modeling &amp; Spatial Market Analysis | R, SQL &amp; Tableau <a href="LINK_FOLDER_PROYEK_R_SQL" target="_blank" class="proof-link">[Projects]</a></span>
-          
+          <span>REWANG Super-App Campus — Collaborative Campus Ecosystem | Web App &amp; Product Design <a href="https://diajengayuam.github.io/rewang-app/" target="_blank" rel="noopener noreferrer" class="proof-link">[Live App]</a> <a href="https://canva.link/u2yht2d9fvtbvc1" target="_blank" rel="noopener noreferrer" class="proof-link">[Project Deck]</a></span>
+          <span class="entry-date">2026</span>
         </div>
         <ul>
-          <li>Managed relational database schemas and executed complex SQL queries via DBeaver and MS Access, alongside statistical modeling in R and spatial data storytelling in Tableau and GeoDa.</li>
+          <li>Collaboratively designed and developed with a cross-functional student team to unify campus services, student productivity tools, and digital workflows into one responsive web application.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span>Academic, Statistical &amp; Financial Analysis Case Studies | R, Python, SPSS, Minitab &amp; Excel <a href="https://canva.link/l9zqfki2bsxfutl" target="_blank" rel="noopener noreferrer" class="proof-link">[Report 1]</a> <a href="https://canva.link/4cd1otga4mzlrbl" target="_blank" rel="noopener noreferrer" class="proof-link">[Report 2]</a> <a href="https://canva.link/1fo7y8rqo7cwnfp" target="_blank" rel="noopener noreferrer" class="proof-link">[Report 3]</a> <a href="https://canva.link/95hej7ys9m96fqc" target="_blank" rel="noopener noreferrer" class="proof-link">[Report 4]</a></span>
+          <span class="entry-date">2024 – 2026</span>
+        </div>
+        <ul>
+          <li>Executed applied statistical modeling, financial and market evaluation, and quantitative operational case studies across university coursework using R, Python, SPSS, Minitab, and Microsoft Excel.</li>
         </ul>
       </div>
     </section>
+
+    <!-- ACADEMIC EXPERIENCE -->
+    <section class="section">
+      <h2 class="section-title">Academic Experience</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span>Department of Business Statistics, ITS — Surabaya</span>
+          <span class="entry-date">2024</span>
+        </div>
+        <div class="entry-sub">
+          <span>Teaching Assistant – Applied Probability</span>
+        </div>
+        <ul>
+          <li>Assisted Applied Probability coursework and practical exercise sessions for <strong>40 first-semester undergraduate students</strong> across one class, reinforcing foundational probability and statistical concepts.</li>
+        </ul>
+      </div>
+    </section>
+
     <!-- ORGANIZATIONAL & LEADERSHIP EXPERIENCES -->
     <section class="section">
       <h2 class="section-title">Organizational &amp; Leadership Experiences</h2>
 
       <div class="entry">
         <div class="entry-header">
-          <span>Dies Natalis KOPMA ITS 2024 — Surabaya <a href="LINK_BUKTI_KOPMA" target="_blank" class="proof-link">[Certificate]</a></span>
-          <span>2024</span>
+          <span>HIMADATA-ITS – OLFACTION — Surabaya</span>
+          <span class="entry-date">2025</span>
         </div>
         <div class="entry-sub">
-          <span>Sponsorship &amp; Partnership Staff</span>
+          <span>Head of Branding Division</span>
         </div>
         <ul>
-          <li>Conducted market mapping and pitched partnership packages to <strong>[15+] prospective sponsors</strong>, negotiating commercial terms and drafting formal Memoranda of Understanding (MoU) and cooperation agreements (SPK).</li>
-          <li>Monitored sponsorship realization and partner deliverables accurately to support event funding targets.</li>
+          <li>Led a <strong>9-member branding team</strong> to plan and execute multi-channel promotional campaigns for a national statistics competition across Instagram, TikTok, WhatsApp Channel, and X.</li>
+          <li>Managed approximately <strong>78 TikTok posts</strong> and comparable Instagram content while coordinating sponsor promotional deliverables and the UTBK tutoring program for high school students.</li>
         </ul>
       </div>
 
       <div class="entry">
         <div class="entry-header">
-          <span>OLFACTION 2024 (ITS) — Surabaya <a href="LINK_BUKTI_OLFACTION" target="_blank" class="proof-link">[Portfolio]</a></span>
-          <span>2024</span>
+          <span>BEM Fakultas Vokasi ITS (Departemen Dalam Negeri) — Surabaya</span>
+          <span class="entry-date">2025</span>
         </div>
         <div class="entry-sub">
-          <span>Head of Branding Division &amp; Webinar Person-in-Charge (PIC)</span>
+          <span>Head of Event Division – Vocational Champions Cup (VCC) 2025</span>
         </div>
         <ul>
-          <li>Led an <strong>8-person branding team</strong> to execute promotional campaigns and coordinated end-to-end webinar operations for <strong>[100+] participants</strong>.</li>
-          <li>Drafted speaker Terms of Reference (TOR), operational rundowns, and cross-divisional schedules to ensure on-time execution.</li>
+          <li>Led the Event Division overseeing two sub-divisions (<em>Main Event</em> and <em>Ceremony</em>), coordinating tournament execution across <strong>8 sports disciplines</strong> as well as opening and closing ceremonies.</li>
+          <li>Managed cross-divisional event planning, task delegation, and operational timelines to ensure seamless program execution.</li>
         </ul>
       </div>
 
       <div class="entry">
         <div class="entry-header">
-          <span>WEVO 2024 (Faculty of Vocational Studies, ITS) — Surabaya <a href="LINK_BUKTI_WEVO" target="_blank" class="proof-link">[Certificate]</a></span>
-          <span>2024</span>
+          <span>HIMADATA-ITS — Surabaya</span>
+          <span class="entry-date">2025</span>
         </div>
         <div class="entry-sub">
-          <span>Secretariat (Kestari) &amp; Database Administration Staff</span>
+          <span>Internationalization Bureau Staff | Event Chair – GLOTION 2025</span>
         </div>
         <ul>
-          <li>Managed, audited, and maintained centralized onboarding records for <strong>[300+] incoming freshmen</strong> with 100% data accuracy while serving as primary participant liaison.</li>
+          <li>Led a <strong>20-member organizing committee</strong> in planning and executing GLOTION 2025 for <strong>120 student participants</strong>, overseeing committee responsibilities, timelines, and program delivery.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span>GERIGI ITS — Surabaya</span>
+          <span class="entry-date">2025</span>
+        </div>
+        <div class="entry-sub">
+          <span>Student Mentor</span>
+        </div>
+        <ul>
+          <li>Mentored incoming freshmen during campus orientation to support their academic transition and introduce ITS campus life and student organizations.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span>OLFACTION 2024 (ITS) — Surabaya</span>
+          <span class="entry-date">2024</span>
+        </div>
+        <div class="entry-sub">
+          <span>Branding Staff &amp; Webinar Person-in-Charge (PIC)</span>
+        </div>
+        <ul>
+          <li>Conceptualized webinar themes, drafted speaker Terms of Reference (TORs) and operational rundowns, and managed end-to-end webinar execution for <strong>100+ participants</strong>.</li>
+          <li>Coordinated external speaker outreach and appeared as on-camera social media talent to drive promotional engagement across digital channels.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span>Dies Natalis KOPMA ITS 2024 — Surabaya</span>
+          <span class="entry-date">2024</span>
+        </div>
+        <div class="entry-sub">
+          <span>Sponsorship Staff</span>
+        </div>
+        <ul>
+          <li>Mapped prospective partners, initiated outreach, and pitched sponsorship packages to <strong>15+ prospective sponsors</strong> and media partners.</li>
+          <li>Drafted formal sponsorship proposals, Memoranda of Understanding (MoUs), and cooperation agreements (SPKs) to support event funding.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span>WEVO 2024 (Faculty of Vocational Studies, ITS) — Surabaya</span>
+          <span class="entry-date">2024</span>
+        </div>
+        <div class="entry-sub">
+          <span>Secretariat (Kestari) &amp; Database Staff</span>
+        </div>
+        <ul>
+          <li>Managed, audited, and maintained centralized onboarding records and registration databases for <strong>300+ incoming freshmen</strong> with <strong>100% accuracy</strong>.</li>
+          <li>Served as participant liaison and student mentor during orientation, delivering official administrative communications and resolving inquiries.</li>
         </ul>
       </div>
     </section>
@@ -314,9 +415,9 @@
     <section class="section" style="margin-bottom: 0;">
       <h2 class="section-title">Skills &amp; Competencies</h2>
       <ul class="skills-list">
-        <li><strong>BI &amp; Data Visualization:</strong> Microsoft Power BI, Google Looker Studio, Tableau, GeoDa <a href="LINK_PORTOFOLIO_BI" target="_blank" class="proof-link">[Projects]</a>.</li>
-        <li><strong>Data Analysis &amp; Programming:</strong> Microsoft Excel (Formulas, Pivot Tables, Power Query, XLOOKUP), SQL, Python, R, Microsoft Access, DBeaver.</li>
-        <li><strong>Business &amp; Soft Skills:</strong> KPI Reporting, Exploratory Data Analysis (EDA), Trend &amp; Margin Analysis, Stakeholder Communication, Negotiation, English (Fluent) &amp; Bahasa Indonesia (Native).</li>
+        <li><strong>BI &amp; Data Visualization:</strong> Microsoft Power BI, Google Looker Studio, Tableau, GeoDa.</li>
+        <li><strong>Data Analysis &amp; Programming:</strong> Microsoft Excel (Advanced Formulas, Pivot Tables, Power Query, XLOOKUP), SQL, Python, R, SPSS, Minitab, Microsoft Access, DBeaver.</li>
+        <li><strong>Business, Operations &amp; Languages:</strong> KPI Reporting, Exploratory Data Analysis (EDA), Trend &amp; Margin Analysis, Stakeholder Communication, Event &amp; Project Coordination, Negotiation, English (Fluent) &amp; Bahasa Indonesia (Native).</li>
       </ul>
     </section>
   </div>
